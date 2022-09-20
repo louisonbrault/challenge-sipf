@@ -15,9 +15,8 @@ services:
   backend:
     depends_on:
       - mysqldb
-    build: .
+    build: ./back
     environment:
-      # SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/sipf?autoReconnect=true&useSSL=false
       SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mysql://root:example@mysqldb:3306/sipf?autoReconnect=true&useSSL=false",
         "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
