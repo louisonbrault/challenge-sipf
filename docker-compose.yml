@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  mysqldb:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: sipf
+    ports:
+      - 3306:3306
+
+  backend:
+    depends_on:
+      - mysqldb
+    build: .
+    environment:
+      # SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/sipf?autoReconnect=true&useSSL=false
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://root:example@mysqldb:3306/sipf?autoReconnect=true&useSSL=false",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.sql.init.mode": "always"}'
+    ports:
+      - 8080:8080
