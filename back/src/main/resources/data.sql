@@ -10,3 +10,14 @@ CREATE TABLE `message` (
   `tags` varchar(120),
   `due_date` date
 );
+
+INSERT INTO message VALUE (
+	1,
+	'2022-09-19 20:00',
+	'2022-09-19 20:00',
+	'Ceci est le premier message géré par le système de gestion des messages',
+	'https://openclassrooms.com',
+	'🥇',
+	'manager,message,challenge',
+	'2022-09-23 20:00'
+)

@@ -1,0 +1,22 @@
+<div class="message-card">
+  <nz-card nzTitle="{{ message.icon }}" [nzExtra]="extraTemplate">
+    <p>{{ message.content }}</p>
+    <div nz-row>
+      <div nz-col nzSpan="9">Créé le {{ message.creationTime | date: 'dd/MM/yy, à HH:mm' }}</div>
+      <div nz-col nzSpan="12" nzOffset="3"><a href="{{ message.link }}">{{ message.link }}</a></div>
+    </div>
+    <div nz-row>
+      <div nz-col nzSpan="9">Modifié le {{ message.lastUpdate | date: 'dd/MM/yy, à HH:mm' }}</div>
+      <div nz-col nzSpan="9" nzOffset="6">Echéance {{ message.dueDate | date: 'dd/MM/yy, à HH:mm' }}</div>
+    </div>
+    <div>
+       <!-- Tags : <span *ngFor="let tag of message.tags">{{ tag }} </span>-->
+       Tags : <span>{{ message.tags }} </span>
+    </div>
+  </nz-card>
+  <ng-template #extraTemplate>
+    <a>Modifier</a>
+    &nbsp;
+    <button (clic)="onDelete()">Supprimer</button>
+  </ng-template>
+</div>

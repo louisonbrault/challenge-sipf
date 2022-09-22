@@ -1,0 +1,29 @@
+<div class="form-card">
+  <h2>Nouveau message</h2>
+  <form [formGroup]="messageForm">
+    <div class="form-group">
+        <label for="content">Contenu</label>
+        <textarea id="content" type="text" formControlName="content" rows="4">
+        </textarea>
+    </div>
+    <div class="form-group">
+        <label for="icon">Icone</label>
+        <input id="icon" type="text" formControlName="icon">
+    </div>
+    <div class="form-group">
+        <label for="link">Lien</label>
+        <input id="link" type="text" formControlName="link">
+    </div>
+    <div class="form-group">
+        <label for="tags">Tags</label>
+        <input id="tags" type="text" formControlName="tags">
+    </div>
+    <div class="form-group">
+        <label for="dueDate">Echéance</label>
+        <input id="dueDate" type="date" formControlName="dueDate">
+    </div>
+    <div class="action-buttons">
+        <button type="button" (click)="onSubmitForm()" [disabled]="messageForm.invalid" nz-button nzType="primary">Enregistrer</button>
+    </div>
+  </form>
+</div>

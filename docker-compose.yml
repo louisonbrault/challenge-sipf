@@ -23,3 +23,10 @@ services:
         "spring.sql.init.mode": "always"}'
     ports:
       - 8080:8080
+
+  front:
+    depends_on:
+      - backend
+    build: ./front
+    ports:
+      - 80:80
