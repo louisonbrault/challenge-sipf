@@ -22,5 +22,9 @@ DELETE /message/{id} <br>
 I have respected the CRUD standards. I used lombok to avoid writing getters and setters and I use hibernate to validate the fields. I also wrote some test to validate the expected behavior.
 
 ## Frontend
-I created the front with Angular and I used Ant Design to make it more beautiful. As of now we can only see the messages
-and create new ones.
+I created the front with Angular and I used Ant Design to make it more beautiful. As of now we can only see the messages, create new ones and delete it.
+
+TODO :
+- Update a message
+- Research using tags
+- Write rich content (bold, underline) 

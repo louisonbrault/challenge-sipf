@@ -28,8 +28,9 @@ export class NewMessageComponent implements OnInit {
   }
 
   onSubmitForm(){
-    this.messageService.addMessage(this.messageForm.value).subscribe();
-    this.router.navigateByUrl('/');
+    this.messageService.addMessage(this.messageForm.value).subscribe(
+      (data) => this.router.navigateByUrl('/'),
+    );
   }
 
 }

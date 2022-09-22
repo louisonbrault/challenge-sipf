@@ -18,7 +18,7 @@ export class MessageService {
   }
 
   deleteMessage(id: number): Observable<Message> {
-    return this.http.delete<Message>('http://localhost:8080/api/message/${id}');
+    return this.http.delete<Message>(`http://localhost:8080/api/message/${ id.toString() }`);
   }
 
   addMessage(

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Message } from '../models/message.model';
+import { Router } from '@angular/router';
 import { MessageService } from '../services/message.service'
 
 @Component({
@@ -10,12 +11,15 @@ import { MessageService } from '../services/message.service'
 export class MessageComponent implements OnInit {
   @Input() message!: Message;
 
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService, private router: Router) {}
 
   ngOnInit() {}
 
   onDelete() {
-    console.log("clic");
-    this.messageService.deleteMessage(this.message.id).pipe();
+    this.messageService.deleteMessage(this.message.id).subscribe(
+      (response) => {
+        window.location.reload();
+      }
+    );
   }
 }
