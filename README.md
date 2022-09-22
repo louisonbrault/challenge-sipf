@@ -25,6 +25,5 @@ I have respected the CRUD standards. I used lombok to avoid writing getters and 
 I created the front with Angular and I used Ant Design to make it more beautiful. As of now we can only see the messages, create new ones and delete it.
 
 TODO :
-- Update a message
-- Research using tags
-- Write rich content (bold, underline) 
+- Research using tags and date
+- Write rich content (bold, underline)

@@ -33,4 +33,8 @@ export class NewMessageComponent implements OnInit {
     );
   }
 
+  dismiss(){
+    this.router.navigateByUrl('/')
+  }
+
 }

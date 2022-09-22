@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS message;
- 
+
 CREATE TABLE `message` (
   `id` int(45) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `creation_time` datetime NOT NULL,
@@ -16,7 +16,7 @@ INSERT INTO message VALUE (
 	'2022-09-19 20:00',
 	'2022-09-19 20:00',
 	'Ceci est le premier message géré par le système de gestion des messages',
-	'https://openclassrooms.com',
+	'https://www.service-public.pf/sipf/',
 	'🥇',
 	'manager,message,challenge',
 	'2022-09-23 20:00'

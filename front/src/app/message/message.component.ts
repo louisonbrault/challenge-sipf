@@ -22,4 +22,8 @@ export class MessageComponent implements OnInit {
       }
     );
   }
+
+  onModify() {
+    this.router.navigateByUrl(`update/${this.message.id}`)
+  }
 }

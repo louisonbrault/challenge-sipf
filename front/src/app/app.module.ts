@@ -14,10 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { MessageListComponent } from './message-list/message-list.component';
 import { HeaderComponent } from './header/header.component';
 import { NewMessageComponent } from './new-message/new-message.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ModifiedMessageComponent } from './modified-message/modified-message.component'
 
 registerLocaleData(en);
 
@@ -27,7 +29,8 @@ registerLocaleData(en);
     MessageComponent,
     MessageListComponent,
     HeaderComponent,
-    NewMessageComponent
+    NewMessageComponent,
+    ModifiedMessageComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,6 +41,7 @@ registerLocaleData(en);
     NzButtonModule,
     NzCardModule,
     NzGridModule,
+    NzIconModule,
     ReactiveFormsModule
   ],
   providers: [
