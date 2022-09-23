@@ -21,6 +21,10 @@ export class MessageService {
     return this.http.get<Message[]>('http://localhost:8080/api/message');
   }
 
+  researchByTag(tag: String): Observable<Message[]> {
+    return this.http.get<Message[]>(`http://localhost:8080/api/message?tag=${ tag }`);
+  }
+
   deleteMessage(id: number): Observable<Message> {
     return this.http.delete<Message>(`http://localhost:8080/api/message/${ id.toString() }`);
   }

@@ -21,8 +21,12 @@ public class MessageService {
 	}
 	
 	// READ
-	public List<Message> getMessages() {
-	    return messageRepository.findAll();
+	public List<Message> getMessages(Optional<String> tag) {
+		if (tag.isPresent()) {
+			return messageRepository.findByTag(tag.get());
+		} else {
+			return messageRepository.findAll();
+		}
 	}
 	
 	// READ ONE

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sipf.messagemanager.model.Message;
@@ -56,8 +57,8 @@ public class MessageController {
 	 * @return - An Iterable object of Message full filled
 	 */
 	@GetMapping("/message")
-	public Iterable<Message> getMessages() {
-		return messageService.getMessages();
+	public Iterable<Message> getMessages(@RequestParam("tag") Optional<String> tag) {
+		return messageService.getMessages(tag);
 	}
 	
 	/**

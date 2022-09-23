@@ -15,6 +15,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputModule } from 'ng-zorro-antd/input';
 import { MessageListComponent } from './message-list/message-list.component';
 import { HeaderComponent } from './header/header.component';
 import { NewMessageComponent } from './new-message/new-message.component';
@@ -42,6 +43,7 @@ registerLocaleData(en);
     NzCardModule,
     NzGridModule,
     NzIconModule,
+    NzInputModule,
     ReactiveFormsModule
   ],
   providers: [

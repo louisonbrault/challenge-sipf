@@ -3,6 +3,13 @@
       <h1>Message manager</h1>
       &nbsp;
       &nbsp;
+      <nz-input-group [nzSuffix]="suffixIconSearch" class="custom-input">
+        <input type="text" nz-input placeholder="Recherche par tag"/>
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+      </ng-template>
+      &nbsp;
       &nbsp;
       <button (click)="onAddNewMessage()" nz-button nzType="primary" style="margin-top: 10px;">Créer un message</button>
     </div>
