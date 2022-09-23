@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Message } from '../models/message.model';
 import { Router } from '@angular/router';
 import { MessageService } from '../services/message.service'
@@ -8,12 +8,10 @@ import { MessageService } from '../services/message.service'
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.scss']
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent {
   @Input() message!: Message;
 
   constructor(private messageService: MessageService, private router: Router) {}
-
-  ngOnInit() {}
 
   onDelete() {
     this.messageService.deleteMessage(this.message.id).subscribe(
