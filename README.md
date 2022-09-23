@@ -33,12 +33,12 @@ Back
 - [x] D’écrire des messages
 - [x] De les consulter
 - [x] De les modifier
-- [x] De les supprimer
+- [x] De les supprimer <br>
 Front
 - [x] Utilise l’API ci-dessus
 - [x] Permet de créer, modifier et supprimer un message
 - [x] Permet de lister et rechercher les messages par tag
-- [ ] Permet de lister et rechercher les messages par date
+- [ ] Permet de lister et rechercher les messages par date <br>
 Bonus
 - [x] Dockerfile / Docker compose
 - [ ] Sécurisation
