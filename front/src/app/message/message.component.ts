@@ -16,9 +16,10 @@ export class MessageComponent {
   onDelete() {
     this.messageService.deleteMessage(this.message.id).subscribe(
       (response) => {
+        this.router.navigateByUrl("/");
         window.location.reload();
       }
-    );
+    )
   }
 
   onModify() {
