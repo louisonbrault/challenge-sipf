@@ -6,6 +6,7 @@ import { ModifiedMessageComponent } from './modified-message/modified-message.co
 
 const routes: Routes = [
   { path: '', component: MessageListComponent },
+  { path: 'search/:tag', component: MessageListComponent },
   { path: 'create', component: NewMessageComponent },
   { path: 'update/:id', component: ModifiedMessageComponent }
 ];
